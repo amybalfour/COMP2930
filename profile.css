@@ -1,0 +1,35 @@
+#profile { 
+}
+#container {
+  height: 530px;
+  width: 400px;
+  background-color:#E5C1BD;
+  padding: 15px;
+/* 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size:12pt;
+    color: #fffdd0;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
+}
+#bookhead {           
+}
+#bookmark {
+  height: 530px;
+  width: 100px;
+  background-color: #E5C1BD;
+  padding: 10px;
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size:12pt;
+    color: #fffdd0;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
+}
+#RecouverLogo {
+height: 40%;
+width: auto;
+}
