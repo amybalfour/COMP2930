@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Activities</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("images/lake.jpg") no-repeat center center fixed; /* image credit: https://commons.wikimedia.org/wiki/User:Isruma */
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-size:12pt;
+            text-shadow:black 2px 2px 2px;
+        }
+        a {
+            color:inherit;
+        }
+        a:hover {
+            color:#C3A995;
+            text-decoration:none;
+            
+        }
+        #navbar{
+            background-color:green;
+            width:100%;
+            height:96px;
+        }
+        #container{
+            margin-left:auto;
+            margin-right:auto;
+            position:center;
+            margin-top:20px;
+            margin-bottom:30px;
+            width:90%;
+            color:white;
+        }
+        .title {
+            font-size:26pt;
+            font-weight:600;
+            color:#CAFFD0;
+        }
+        .activityTitle {
+            font-size:16pt;
+            font-weight:550;
+            margin:10px;
+            color:#CAFFD0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+        }
+        .activityTitle:hover {
+            white-space:normal;
+            overflow:wrap;
+        }
+
+        .activityDate {
+            line-height: 12px;
+            margin:10px;
+        }
+
+        .line{
+            display:none;
+            padding:0;
+        }
+        .section{
+            border:1px solid white;
+            margin-bottom:30px;
+        }
+        
+        /* Copied code for image overlays */
+
+        .hovereffect {
+            max-width: 88%;
+            max-height: 86%;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            cursor: default;
+            background: #42b078;
+            margin:10px;
+            margin-bottom:20px;
+            margin-top:14px;
+            border:2px solid black;
+        }
+
+            .hovereffect .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            padding: 50px 20px;
+        }
+
+            .hovereffect img {
+            display: block;
+            position: relative;
+            max-width: none;
+            width: calc(100% + 20px);
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: translate3d(-10px,0,0);
+            transform: translate3d(-10px,0,0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+            .hovereffect:hover img {
+            opacity: 0.4;
+            filter: alpha(opacity=40);
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+            .hovereffect h2 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            font-size: 17px;
+            overflow: hidden;
+            padding: 0.5em 0;
+            background-color: transparent;
+        }
+
+            .hovereffect h2:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            content: '';
+            -webkit-transition: -webkit-transform 0.35s;
+            transition: transform 0.35s;
+            -webkit-transform: translate3d(-100%,0,0);
+            transform: translate3d(-100%,0,0);
+        }
+
+            .hovereffect:hover h2:after {
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+            .hovereffect a, .hovereffect p {
+            color: #FFF;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: translate3d(100%,0,0);
+            transform: translate3d(100%,0,0);
+        }
+
+            .hovereffect:hover a, .hovereffect:hover p {
+            opacity: 1;
+            filter: alpha(opacity=100);
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+            /* End of copied code */
+
+
+        @media (max-width: 767.5px) {
+            .line{
+                display:grid;
+                width:90%;
+                position:center;
+            }
+            .activityTitle {
+                white-space:normal;
+                overflow:wrap;
+                margin-bottom:12px;
+            }
+            .section{
+                margin-bottom:20px;
+            }
+        }
+    </style>
+
+    </head>
+    <body>
+        <nav id="navbar">
+
+        </nav>
+            <div id="container"> <!-- Container start -->  
+
+                <div class="title">
+                    <p>Activities</p>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>Have some spare time? Want to do something that promotes Zero Waste,
+                            or at least doesn't contribute to it? Check out the activites
+                            listed below for things you can do around Vancouver now! </p>
+                    </div>
+                </div> <!-- row end -->
+
+                <hr>
+
+                <!-- Events section start -->
+                <div class="title">
+                    <p>Events</p>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>Come join many others and participate in various Zero Waste events. Your part
+                                makes a big difference in the journey towards making Vancouver an EcoCity! </p>
+                    </div>
+                </div> <!-- row end -->
+                <div class="section">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <p class="activityTitle"><a href="activities/a1.html">Cleanup Party</a></p>
+                            <p class="activityDate">Saturday, May 25, 2019</p>
+                            <p class="activityDate">10:00am - 12:00pm</p>
+                            <a href="activities/a1.html">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="images/neighbourhoodcleanup2.jpg" alt="a1pic"> <!-- Image credit http://flickrhivemind.net/User/Rod%20Raglin-->
+                                <div class="overlay">
+                                    <h2></h2>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                        <hr class="line">
+                        <div class="col-sm-6 col-lg-3">
+                            <p class="activityTitle"><a href="activities/a2.html">Recycling/Reuse Drop-Off</a></p>
+                            <p class="activityDate">Saturday, June 15, 2019</p>
+                            <p class="activityDate">10:00am - 1:00pm</p>
+                            <div class="hovereffect">
+                                <a href="activities/a2.html"><img class="img-responsive" src="images/reuse2.jpg" alt="a2pic"></a>
+                                <div class="overlay">
+                                     <h2></h2>
+                                </div>
+                            </div>   
+                        </div>
+                        <hr class="line">
+                        <div class="col-sm-6 col-lg-3">
+                            <p class="activityTitle"><a href="activites/a3.html">Pop Up Junk Drop</a></p>
+                            <p class="activityDate">Sunday, May 26, 2019</p>
+                            <p class="activityDate">10:00am - 4:00pm</p>
+                            <div class="hovereffect">
+                                <a href="activities/a3.html"><img class="img-responsive" src="images/junkpile2.jpg" alt="a3pic"></a> <!-- Image credit https://commons.wikimedia.org/wiki/User:SuperJew--> 
+                                <div class="overlay">
+                                    <h2></h2>
+                                </div>
+                            </div>      
+                        </div>
+                        <hr class="line">
+                        <div class="col-sm-6 col-lg-3">
+                            <p class="activityTitle"><a href="activites/a4.html">Waste Reduction Week 2019</a></p>
+                            <p class="activityDate">October 21 - 27, 2019</p>
+                            <p class="activityDate">All week</p>
+                            <div class="hovereffect">
+                                <a href="activities/a4.html"><img class="img-responsive" src="images/totebag.jpg" alt="a4pic"></a>  <!-- Image credit https://www.publicdomainpictures.net/en/browse-author.php?a=109040-->
+                                <div class="overlay">
+                                    <h2></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- row end -->
+                </div> <!-- Events section end -->
+
+                <!-- Outdoor section start -->
+                <div class="title">
+                    <p>Outdoor</p>
+                </div>
+                <div class="row">
+                    <div class="col-xs-10">
+                        <p>Go for a hike or stroll, and enjoy the natural environment our beautiful
+                            province has to offer.
+                        </p>
+                    </div>
+                </div> <!-- row end -->
+                <div class="section">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <p class="activityTitle"><a href="activites/a5.html">Garibaldi Lake</a></p>
+                            <p class="activityDate">Hike / Swim</p>
+                            <p class="activityDate">Whistler, BC</p>
+                            <div class="hovereffect">
+                                <a href="activities/a5.html"><img class="img-responsive" src="images/garibaldi.jpg" alt="a5pic"></a> <!-- Image credit https://commons.wikimedia.org/wiki/File:Garibaldi_Lake_from_Panorama_Ridge.jpg-->  
+                                <div class="overlay">
+                                    <h2></h2>
+                                </div>
+                            </div>
+                        </div>
+                            <hr class="line">
+                        <div class="col-sm-6 col-lg-3">
+                            <p class="activityTitle"><a href="activites/a6.html">Richmond Dyke</a></p>
+                            <p class="activityDate">Bike Ride / Walk</p>
+                            <p class="activityDate">Richmond, BC</p>
+                            <div class="hovereffect">
+                                <a href="activities/a6.html"><img class="img-responsive" src="images/richmonddyke.jpg" alt="a6pic"></a> <!-- Image credit https://www.flickr.com/people/60944931@N00--> 
+                                <div class="overlay">
+                                    <h2></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="line">
+                        <div class="col-sm-6 col-lg-3">
+                            <p class="activityTitle"><a href="activites/a7.html">White Pine Beach</a></p>
+                            <p class="activityDate">Swim / Relax</p>
+                            <p class="activityDate">Port Coquitlam, BC</p>
+                            <div class="hovereffect">
+                                <a href="activities/a7.html"><img class="img-responsive" src="images/whitepine.png" alt="a7pic"></a> <!-- Image credit https://www.flickr.com/photos/dennissylvesterhurd/-->   
+                                <div class="overlay">
+                                    <h2></h2>
+                                </div>
+                            </div>     
+                        </div>
+                        <hr class="line">
+                        <div class="col-sm-6 col-lg-3">
+                            <p class="activityTitle"><a href="activites/a8.html">The Chief</a></p>
+                            <p class="activityDate">Hike</p>
+                            <p class="activityDate">Squamish, BC</p>
+                            <div class="hovereffect">
+                                <a href="activities/a8.html"><img class="img-responsive" src="images/chief.jpg" alt="a8pic"></a> <!-- Image credit https://commons.wikimedia.org/wiki/User:Trougnouf--> 
+                                <div class="overlay">
+                                    <h2></h2>
+                                </div>
+                            </div>    
+                        </div>
+                    </div> <!-- row end -->
+                </div> <!-- Outdoor Section end -->
+
+        </div> <!-- container end --> 
+    </body>
+</html>
