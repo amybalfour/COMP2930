@@ -1,0 +1,157 @@
+#destinationsTitle {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+#destinationsSubsection {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 40px;
+  font-size: 40px;
+  text-align: center;
+  color: #EEF1EF;
+}
+
+#lupiiTitle {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/background2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+
+#whiteSpotTitle {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/background3.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+
+#nadaTitle {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/background4.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+
+#whiteSpotText {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/background3.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  text-align: center;
+  color: #EEF1EF;
+  border-radius: 40px;
+  padding: 15px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+#lupiiText {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/background2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  text-align: center;
+  color: #EEF1EF;
+  border-radius: 40px;
+  padding: 15px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+#nadaText {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/background4.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  text-align: center;
+  color: #EEF1EF;
+  border-radius: 40px;
+  padding: 15px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+#whiteSpotDivide {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/background3.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 70px;
+  padding: 9px;
+}
+
+#lupiiDivide {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/background2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 60px;
+  padding: 9px;
+}
+
+#nadaDivide {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/background4.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 60px;
+  padding: 9px;
+}
+
+img {
+  width: 95%;
+  height: 95%;
+  transition: transform 2s;
+  border-radius: 40px;
+}
+
+#imgLeft {
+  margin-left: 10px;
+}
+
+img:hover {
+  transform:scale(1.1);
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  color: #EEF1EF;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+#rowSpace {
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+a {
+  color: #EEF1EF;
+}
