@@ -79,6 +79,7 @@
 
         #i-did-this {
             padding-bottom: 5%;
+            padding-top: 3%;
         }
 
         #imgResize {
@@ -101,6 +102,7 @@
           #Introduction {
             margin-top: -125%;
           }
+
         	/* Button code copied from https://1stwebdesigner.com/free-code-snippets-css-buttons/ */
 
             .button{
@@ -119,7 +121,6 @@
                 text-decoration: none;
                 white-space: nowrap;
                 color: #555;
-
 
                 background-color: #ddd;
                 background-image: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
