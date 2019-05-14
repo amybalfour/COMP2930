@@ -4,6 +4,12 @@
       <title>Lupii Cafe</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="stylesheet" href="./css/destinationsStyle.css">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+      integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+      crossorigin=""></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -62,10 +68,10 @@
 
         <div id="rowSpace">
           <div class="row">
-            <div class="col-md-4">
-              <img src="./Images/lupiiCafe/lupii11.jpg" title="'Lupii Cafe'">
+            <div class="col-lg-4">
+              <img src="./Images/lupiiCafe/lupii11.jpg" title="'Lupii Cafe'" id="photoGallery">
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
               <div id="lupiiText">
                 <p>Lupii Cafe is a Zero Waste paradise. From the floors of the cafe to the containers used for food, everything in sight
                   is made from reusable/reused materials. <br>The tables used for eating are actually made from the floor of an old gymnasium!
@@ -74,8 +80,8 @@
                 </p>
               </div>
             </div>
-            <div class="col-md-4">
-              <img src="./Images/lupiiCafe/lupii7.jpg" title="'Lupii Cafe'" class="mt-3">
+            <div class="col-lg-4 mt-3">
+              <img src="./Images/lupiiCafe/lupii7.jpg" title="'Lupii Cafe'" id="photoGallery">
             </div>
           </div>
         </div>
@@ -84,10 +90,10 @@
 
         <div id="rowSpace">
           <div class="row">
-            <div class="col-md-4">
-              <img src="./Images/lupiiCafe/lupii13.jpg" title="'Lupii Cafe'" class="mt-3">
+            <div class="col-lg-4 mt-3">
+              <img src="./Images/lupiiCafe/lupii13.jpg" title="'Lupii Cafe'" id="photoGallery">
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
               <div id="lupiiText">
                 <p>They have their own <a href="http://lupiicafe.com/"><u>website</u></a>, <a href="https://www.facebook.com/lupiicafe/"><u>facebook page</u>,</a>
                     and <a href="https://www.instagram.com/lupiicafe/?hl=en"> <u>instagram</u></a> where they post regularly about current community events
@@ -95,8 +101,8 @@
                 </p>
               </div>
             </div>
-            <div class="col-md-4">
-              <img src="./Images/lupiiCafe/lupii12.jpg" title="'Lupii Cafe'" class="mt-3">
+            <div class="col-lg-4 mt-3">
+              <img src="./Images/lupiiCafe/lupii12.jpg" title="'Lupii Cafe'" id="photoGallery">
             </div>
           </div> 
         </div>  
@@ -105,11 +111,11 @@
           <div id="mapid">           
           </div>
           <script>
-            var mymap = L.map('mapid').setView([49.2171749, -123.0316145], 16);
-            var marker = L.marker([49.2328109, -123.0140385]).addTo(mymap);
+            var mymap = L.map('mapid').setView([49.2171749, -123.0316145], 14);
+            var marker = L.marker([49.2171749, -123.0316145]).addTo(mymap);
             marker.bindPopup("<b>Lupii Cafe</b><br>7743 Champlain Crescent, Vancouver, BC, V5S 4J6").openPopup();
 
-            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYnJ5Y2UxMjM0NSIsImEiOiJjanZoMmxvejYwZTNsNDhyZ2w2M2NoNG9rIn0.xyyjfXZ4egW9hJGX0lu5Cw', {
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibGFsY3VheiIsImEiOiJjanZvODJ2ZjkxZmh0M3lxamkxYjJ2c2owIn0.rnPo2MAYGB2Iy9ZhthMdxQ', {
               attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
               maxZoom: 18,
               id: 'mapbox.streets',
