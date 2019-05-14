@@ -60,6 +60,22 @@
   color: #EEF1EF;
   border-radius: 40px;
   padding: 15px;
+  padding-bottom: 140px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+#whiteSpotText2 {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/whiteSBackground.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  text-align: center;
+  color: #EEF1EF;
+  border-radius: 40px;
+  padding: 15px;
+  padding-bottom: 210px;
   margin-right: 20px;
   margin-top: 10px;
 }
@@ -129,8 +145,9 @@ img {
   border-radius: 40px;
 }
 
-#imgLeft {
-  margin-left: 10px;
+#imgSizing {
+  width: 95%;
+  height: 95%;
 }
 
 img:hover {
@@ -154,4 +171,12 @@ h1 {
 
 a {
   color: #EEF1EF;
+}
+
+#mapid { 
+  height: 300px; 
+  width: 92%;
+  border-radius: 40px;
+  margin-left: 55px;
+  margin-right: 50px;
 }
