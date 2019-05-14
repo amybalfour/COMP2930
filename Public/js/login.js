@@ -7,6 +7,7 @@ function logIn(){
 
   firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).then(function() {
     window.location.href="profile.html";
+	window.alert("Login 1.0");
   
   }).catch(function(error) {
     // Handle Errors here.
@@ -14,6 +15,6 @@ function logIn(){
     var errorMessage = error.message;
     
     window.alert("\nError code: " + errorCode + "\n" + errorMessage);
-    window.location.href="logIn.html";
+    window.location.href="login.html";
   }); 
 }

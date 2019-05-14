@@ -13,7 +13,7 @@ function createAccount(){
 		{
          "email":user.email
         });
-		
+	  window.alert("Sign up successful!");
       window.location.href="profile.html";
 
     }).catch(function(error) {

@@ -5,6 +5,10 @@
   width: 400px;
   background-color:#E5C1BD;
   padding: 15px;
+  margin: 30px;
+  border-radius: 20px;
+  border: 2px solid #EEF1EF;
+  word-wrap:break-all; 
 /* 
     -webkit-background-size: cover;
     -moz-background-size: cover;
