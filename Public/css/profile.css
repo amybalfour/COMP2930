@@ -1,5 +1,8 @@
 #profile { 
 }
+body {
+  font-family: Trebuchet MS;  
+}
 #container {
   height: 530px;
   width: 400px;
@@ -8,7 +11,7 @@
   margin: 30px;
   border-radius: 20px;
   border: 2px solid #EEF1EF;
-  word-wrap:break-all; 
+  word-wrap:break-all;
 /* 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -38,5 +41,5 @@ height: 40%;
 width: auto;
 }
 #navbar {
-margin-bottom: -95px;
+margin-bottom: -195px;
 }

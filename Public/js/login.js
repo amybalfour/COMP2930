@@ -7,7 +7,7 @@ function logIn(){
 
   firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).then(function() {
     window.location.href="profile.html";
-	window.alert("Login 1.0");
+	window.alert("Login successful!");
   
   }).catch(function(error) {
     // Handle Errors here.
