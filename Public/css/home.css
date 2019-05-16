@@ -1,9 +1,12 @@
 body {
   font-family: Trebuchet MS;  
+  overflow-x: hidden;
 }
 #RecouverLogo {
-  height: 40%;
-  width: auto;
+  height: 24%;
+  margin-top: -24px;
+  position: absolute;
+  z-index: 2;
 }
 #HomeBackground {
   height: 100%;
@@ -11,11 +14,20 @@ body {
   margin-top: -95px;
 }
 #Introduction {
-  margin-top: 50px;
+  margin-top: 150px;
 }
 #NavBarContainer {
-  height: 165px;
+  height: 75px;
+  width: 150%;
+  position: relative;
+  z-index: auto;
+  
 }
+#header {
+  z-index: auto;
+
+}
+
 .modal { /*modal code from https://www.w3schools.com/howto/howto_css_modals.asp */
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */

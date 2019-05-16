@@ -24,26 +24,28 @@
   </head>
   
   <!--Body includes a background pictures and starts here-->
-  <body background="./Public/Images/Home_Background.jpg">
-
-    <!--This colours the whole div that includes the logo and the nav bar-->
-    <div class = "row" id="NavBarContainer" style = "background-color: #EEF1EF">
-      <div class = "col-sm-12" style = "text-align: center">
-
-        <!--This is the logo-->
-        <img src = "Public/images/Background_Logo_OG.png" id = "RecouverLogo">
-        
+  <body background="./Public/Images/Home_Background.jpg">		
+	
+		<!--This is the logo-->
+		<a class="navbar-brand" href="#">
+			<img src = "Public/images/Background_Logo.png" id = "RecouverLogo">	
+		</a>
+	
         <!--Nav bar begins here-->
-        <nav class="navbar navbar-light navbar-expand-md bg-faded sticky-top justify-content-center" 
-          style = "background-color: #EEF1EF">
+		<nav class="navbar navbar-light navbar-expand-md bg-faded sticky-top justify-content-center" 
+		style = "background-color: #EEF1EF" id="header">
+			
+
+        
           
           <!--Collapses the nav bar into a smaller menu for phones and tablets-->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-        
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  
+		  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav w-100 nav-justified">
   
               <!--This is the link to the Home page-->
@@ -57,6 +59,7 @@
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Destinations
                 </a>
+				
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#">All</a>
                   <div class="dropdown-divider"></div>
@@ -96,21 +99,26 @@
               </li>
 
               <!--This is the link for users to login or sign up-->
-              </li>
+              <li>
                 <a class="nav-link active" href="./signUp.html">Login/Sign Up</a>
               </li>
             </ul>
-          </div>
+			</div>
+        
+
+        
+          
+
         </nav>
         <!--Nav bar ends here-->
-      </div>
-    </div>
+      
+    
     <!--This is the end of the div that contains the nav bar and logo-->	
 	
     <!--Introduction to webpage begins here-->
     <div>
       <div class="row" style="text-align: center" id="Introduction">
-        <div class="col-sm-12">
+        <div class="col-sm-12"></br>
           <p>Welcome to ReCouver!</p>
           <p>We believe in reducing the impact we have on our planet and providing information</p>
           <p> to help you start your journey into a zero-waste lifestyle. We provide a hub of</p>

@@ -2,6 +2,7 @@
 }
 body {
   font-family: Trebuchet MS;  
+  overflow-x: hidden;
 }
 #container {
   height: 530px;
@@ -41,5 +42,5 @@ height: 40%;
 width: auto;
 }
 #navbar {
-margin-bottom: -195px;
+margin-bottom: -250px;
 }
