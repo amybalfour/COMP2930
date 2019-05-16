@@ -1,0 +1,88 @@
+<!doctype html>
+<head>
+    <title>Scrap Wood Projects</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="./DIY-pages-css.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <!--Link to the JavaScript library necessary for navbar functions-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    <!-- Bootstrap -->
+
+</head>
+<body>
+    <!--This colours the whole div that includes the logo and the nav bar-->
+    <div class = "row" style = "background-color: #EEF1EF" >
+      <div id="nav-bar" class = "col-sm-12" style = "text-align: center" >
+
+        <!--This is the logo-->
+        <img src = "images/Background_Logo(2).png" id = "RecouverLogo">
+        <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+            <ul class="navbar-nav w-100 nav-justified">
+              <!--This is the link to the Home page-->
+              <li><a class="navbar-brand" href="#">Home</a></li>
+              <!--This is the Destinations link and dropdown menu with subsections-->
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Destinations </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Restaurants</a>
+                  <a class="dropdown-item" href="#">Grocery Stores</a>
+                  <a class="dropdown-item" href="#">Cafes</a>
+                </div>
+              </li>
+              <!--This is the Activities link and dropdown menu with subsections-->
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Activities </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Events</a>
+                  <a class="dropdown-item" href="#">Outdoor</a>
+                </div>
+              </li>
+              <!--This is the DIY link and dropdown menu with subsections-->
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="./DIY-v3.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                DIY </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="./diy_beauty-v1.html">Makeup and Beauty</a>
+                  <a class="dropdown-item" href="./diy_household-v1.html">Household Projects</a>
+                  <a class="dropdown-item" href="./diy_products-v1.html">Lifestyle Products</a>
+                </div>
+              </li>
+              <!--This is the link to the Login/Sign Up page-->
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Login/Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!--This is the end of the div that contains the nav bar and logo-->
+    <div class="container">
+        <div id="i-did-this">
+            <button class="green button">I did this!</button>
+        </div>
+        <div id="section" class="row">
+            <div id="contents" class="col-lg-6">
+                <h1>Scrap Wood Projects</h1> <!-- change to DIY title --> 
+                <p>For when you have too much wood for the fire pit</p> <!-- little blurb about the DIY -->
+                <p><a href="https://www.manmadediy.com/scrap-wood-projects">Follow this link for scrap wood DIYs!</a></p>
+            </div>
+            <div id="contents" class="col-lg-6"> <!-- apply imgResize id to images. For YT videos, apply video id and delete width and height settings-->
+                <img id="imgResize" src="https://images.manmadediy.com/j3tB9L2kqNWt5zl4IYrgFifCGYM=/800x0/filters:no_upscale()/https://assets.manmadediy.com/photos/34068/Title_picture_-_option_3original.jpg" alt="Wood Mountain">
+                <p id="credit">Credit: <a href="https://www.manmadediy.com/scrap-wood-projects">ManMadeDIY</a></p> <!-- credit -->
+            </div>
+        </div>
+    </div>
+</body>
