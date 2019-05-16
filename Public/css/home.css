@@ -1,0 +1,117 @@
+body {
+  font-family: Trebuchet MS;  
+  overflow-x: hidden;
+}
+#RecouverLogo {
+  height: 24%;
+  margin-top: -24px;
+  position: absolute;
+  z-index: 2;
+}
+#HomeBackground {
+  height: 100%;
+  width: 100%;
+  margin-top: -95px;
+}
+#Introduction {
+  margin-top: 150px;
+}
+#NavBarContainer {
+  height: 75px;
+  width: 150%;
+  position: relative;
+  z-index: auto;
+  
+}
+#header {
+  z-index: auto;
+
+}
+
+.modal { /*modal code from https://www.w3schools.com/howto/howto_css_modals.asp */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 50%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  align-content: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100wh; /* https://codepen.io/P1N2O/pen/pyBNzX */
+    height: 90vh;
+    color: #fff;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#myPassion {
+  max-width:50%;
+  max-height:100%
+}
+
+#eggText {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+}
+
+@-webkit-keyframes Gradient { /* https://codepen.io/P1N2O/pen/pyBNzX */
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Gradient { /* https://codepen.io/P1N2O/pen/pyBNzX */
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient { /* https://codepen.io/P1N2O/pen/pyBNzX */
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}            
