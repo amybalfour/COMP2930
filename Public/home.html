@@ -4,179 +4,121 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <style>
-      #RecouverLogo {
-        height: 40%;
-        width: auto;
-      }
-      #HomeBackground {
-        height: 100%;
-        width: 100%;
-        margin-top: -95px;
-      }
-      #Introduction {
-        margin-top: 50px;
-      }
-      #NavBarContainer {
-        height: 165px;
-      }
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 50%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        align-content: center;
-      }
-
-      /* Modal Content/Box */
-      .modal-content {
-        margin: 15% auto; /* 15% from the top and centered */
-        padding: 20px;
-        border: 1px solid #888;
-        width: 100wh;
-	      height: 90vh;
-	      color: #fff;
-	      background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-	      background-size: 400% 400%;
-	      -webkit-animation: Gradient 15s ease infinite;
-	      -moz-animation: Gradient 15s ease infinite;
-	      animation: Gradient 15s ease infinite;
-      }
-
-      /* The Close Button */
-      .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-      }
-
-      .close:hover, .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-      }
-      #myPassion {
-        max-width:50%;
-        max-height:100%
-      }
-
-      #eggText {
-        font-family: "Comic Sans MS", cursive, sans-serif;
-        text-align: center;
-      }
-
-      @-webkit-keyframes Gradient {
-	      0% {
-		      background-position: 0% 50%
-	      }
-	      50% {
-		      background-position: 100% 50%
-	      }
-	      100% {
-		      background-position: 0% 50%
-	      }
-      }
-
-      @-moz-keyframes Gradient {
-	      0% {
-		      background-position: 0% 50%
-	      }
-	      50% {
-		      background-position: 100% 50%
-	      }
-	      100% {
-		      background-position: 0% 50%
-	      }
-      }
-
-      @keyframes Gradient {
-	      0% {
-		      background-position: 0% 50%
-	      }
-	      50% {
-		      background-position: 100% 50%
-	      }
-	      100% {
-		      background-position: 0% 50%
-	      }
-      }            
-    </style>
+    <!--The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!--Taken from https://getbootstrap.com/docs/3.3/getting-started/-->
     
-    <title>Recouver</title>
+    <title>ReCouver</title>
+
+    <!--Link to the CSS style sheet for the home page-->
+    <link rel="stylesheet" type="text/css" href="./css/home.css"/>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
     <!--Link to the JavaScript library necessary for navbar functions-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+      crossorigin="anonymous"></script>    <!-- Bootstrap -->
     <!--Link to the CSS library from Bootstrap-->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  </head>
-  <body background="Public/Images/Home_Background.jpg">
-    <!--This colours the whole div that includes the logo and the nav bar-->
-    <div class = "row" id="NavBarContainer" style = "background-color: #EEF1EF">
-      <div class = "col-sm-12" style = "text-align: center">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">    
+  </head>
+  
+  <!--Body includes a background pictures and starts here-->
+  <body background="./images/Home_Background.jpg">		
+	
+		<!--This is the logo-->
+		<a class="navbar-brand" href="#">
+			<img src = "./images/Background_Logo.png" id = "RecouverLogo">	
+		</a>
+	
+        <!--Nav bar begins here-->
+		<nav class="navbar navbar-light navbar-expand-md bg-faded sticky-top justify-content-center" 
+		style = "background-color: #EEF1EF" id="header">
+			
 
-        <!--This is the logo-->
-        <img src = "Public/Images/Background_Logo(2).png" id = "RecouverLogo">
-        <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        
+          
+          <!--Collapses the nav bar into a smaller menu for phones and tablets-->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
-          <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+		  
+		  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav w-100 nav-justified">
+  
               <!--This is the link to the Home page-->
-              <li><a class="navbar-brand" href="#">Home</a></li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              
               <!--This is the Destinations link and dropdown menu with subsections-->
-              <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Destinations </a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Destinations
+                </a>
+				
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">All</a>
+                  <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Cafes</a>
                   <a class="dropdown-item" href="#">Grocery Stores</a>
                   <a class="dropdown-item" href="#">Restaurants</a>
                 </div>
               </li>
+              
               <!--This is the Activities link and dropdown menu with subsections-->
-              <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Activities </a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Activities
+                </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">All</a>
+                  <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Events</a>
-                  <a class="dropdown-item" href="#">Outdoor</a>
+                  <a class="dropdown-item" href="#">Outdoors</a>
                 </div>
               </li>
+              
               <!--This is the DIY link and dropdown menu with subsections-->
-              <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                DIY </a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  DIY
+                </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">All</a>
+                  <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Makeup and Beauty</a>
                   <a class="dropdown-item" href="#">Household Projects</a>
                   <a class="dropdown-item" href="#">Lifestyle Products</a>
                 </div>
               </li>
-                <a class="nav-link active" href="Login Page.html">Login/Sign Up</a>
+
+              <!--This is the link for users to login or sign up-->
+              <li>
+                <a class="nav-link active" href="./signUp.html">Login/Sign Up</a>
               </li>
             </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <!--This is the end of the div that contains the nav bar and logo-->
+			</div>
+        
 
+        
+          
+
+        </nav>
+        <!--Nav bar ends here-->
+      
+    
+    <!--This is the end of the div that contains the nav bar and logo-->	
+	
     <!--Introduction to webpage begins here-->
     <div>
       <div class="row" style="text-align: center" id="Introduction">
-        <div class="col-sm-12">
+        <div class="col-sm-12"></br>
           <p>Welcome to ReCouver!</p>
           <p>We believe in reducing the impact we have on our planet and providing information</p>
           <p> to help you start your journey into a zero-waste lifestyle. We provide a hub of</p>
@@ -198,10 +140,12 @@
           <div id="myModal" class="modal">
             <div class="modal-content">
               <span class="close">&times;</span>
-              <center><iframe width="720" height="360" src="https://www.youtube.com/embed/EAzmc9GMd1k?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+              <center><iframe width="720" height="360" src="https://www.youtube.com/embed/EAzmc9GMd1k?" 
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe></center>
               <p id="eggText">I listened to this on repeat</p>
               <script>
-                // Get the modal
+                // Get the modal, taken from https://www.w3schools.com/howto/howto_css_modals.asp*/
                 var modal = document.getElementById('myModal');  
                 // Get the button that opens the modal
                 var btn = document.getElementById("myBtn");    
