@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!--Taken from https://getbootstrap.com/docs/3.3/getting-started/-->
+    
+    <title>ReCouver</title>
+
+    <!--Link to the CSS style sheet for the home page-->
+    <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Link to the JavaScript library necessary for navbar functions-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+      crossorigin="anonymous"></script>    <!-- Bootstrap -->
+    <!--Link to the CSS library from Bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">   
+    <!--Font link(poppins)-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
+	<script src="./js/Initialize_Firebase.js"></script>
+  </head>
+  
+    <!--Body includes a background pictures and starts here-->
+  <body>	
+    <!--Nav bar begins here-->
+	<nav class="navbar navbar-light navbar-expand-md bg-faded sticky-top justify-content-center" style = "background-color: #EEF1EF" id="header">
+			
+    <!--Collapses the nav bar into a smaller menu for phones and tablets-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+        </button>
+		  
+		  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav justify-content-center">
+	  
+			<!--This is the link to the Home page -->
+			<li class="nav-item active">
+			<a class="nav-link" href="./home.html">Home <span class="sr-only">(current)</span></a>
+			</li>
+				  
+				<!--This is the Destinations link and dropdown menu with subsections-->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle active" href="#" id="destinations" role="button" 
+					  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Destinations
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">All</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="#">Cafes</a>
+						  <a class="dropdown-item" href="#">Grocery Stores</a>
+						  <a class="dropdown-item" href="#">Restaurants</a>
+					</div>
+				</li>
+				  
+				<!--This is the Activities link and dropdown menu with subsections-->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+					  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Activities
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">All</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="#">Events</a>
+						  <a class="dropdown-item" href="#">Outdoors</a>
+					</div>
+				</li>				  
+					<!--This is the logo
+					<li>	
+						<span class="align-middle">
+						<img src = "./images/Background_Logo.png" id = "RecouverLogo" style="width:100px;">	
+						</span>
+					</li>-->
+									  
+				<!--This is the DIY link and dropdown menu with subsections-->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+					  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  DIY
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">All</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="#">Makeup and Beauty</a>
+						  <a class="dropdown-item" href="#">Household Projects</a>
+						  <a class="dropdown-item" href="#">Lifestyle Products</a>
+					</div>
+				</li>
+
+				<!--This is the link for users to login or sign up-->
+				<li>
+					<a class="nav-link active justify-content-right" href="./signUp.html">Login/Sign Up</a>
+				</li>
+			</ul>
+		</div>
+    </nav>
+    <!--Nav bar ends here-->
+	
+	
+	<div class="container" id="privacy" style="padding: 20px;">
+	<div class="row">
+	<div class="col-md-12 justify-content-center">
+		<p>
+			
+			<b>Privacy Notice</b></br>
+			This privacy notice discloses the privacy practices for ReCouver. This privacy notice applies solely to information collected by this website. It will notify you of the following:
+
+			What personally identifiable information is collected from you through the website, how it is used and with whom it may be shared.
+			What choices are available to you regarding the use of your data.
+			The security procedures in place to protect the misuse of your information.
+			How you can correct any inaccuracies in the information.</br></br>
+			<b>Information Collection, Use, and Sharing </b></br>
+			We are the sole owners of the information collected on this site. We only have access to/collect information that you voluntarily give us via email or other direct contact from you. We will not sell or rent this information to anyone.
+
+			We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request, e.g. to ship an order.
+
+			Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy.
+			</br></br>
+
+			<b>Security </b></br>
+			We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline.
+
+			Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a lock icon in the address bar and looking for "https" at the beginning of the address of the Web page.
+
+			While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment.
+			</br></br>
+			<b>If you feel that we are not abiding by this privacy policy, you should contact us immediately at BCIT.</b>			
+			
+		</p>
+	</div>
+	</div>
+	</div>
+	
+	
+	<!-- Footer -->
+    <div class="footer-basic">
+		<footer>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="./about.html">About Us</a></li>
+                <li class="list-inline-item"><a href="./credit.html">Credit</a></li>
+                <li class="list-inline-item"><a href="./privacy.html">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">COMP2930_Team 10 © 2019</p>
+		</footer>
+	</div>
+
+
+
+  </body>
+</html>
