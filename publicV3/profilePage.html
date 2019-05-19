@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">        
+		<title>Profile</title>
+		
+		<!-- This is imported to use the font-awesome icons. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+		  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!--Link to the JavaScript library necessary for navbar functions-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+      crossorigin="anonymous"></script>
+
+    <!--Link to the CSS library from Bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">
+
+		<!-- Firebase libraries --> 
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+		
+		<!-- Link to profile css and the sheet that links our Firebase database. -->
+		<link rel = "stylesheet" type = "text/css" href = "./css/profile.css" />
+		
+		<script src="./js/initializeFirebase.js"></script>
+		<script src="./js/accountInfo.js"></script>
+		<!--Font link(poppins)-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  </head>
+
+
+  <body background="./images/blue-sky.jpg">
+		   
+		<!--Nav bar begins here-->
+    <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center" 
+      style = "background-color: #EEF1EF" id="header">
+			
+      <!--Collapses the nav bar into a smaller menu for phones and tablets-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!--Collapses the nav bar on a smaller screen-->
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav justify-content-center">
+	  
+			    <!--This is the link to the Home page-->
+			    <li class="nav-item active">
+			      <a class="nav-link" href="./homePage.html">Home <span class="sr-only">(current)</span></a>
+			    </li>
+				  
+			    <!--This is the Destinations link and dropdown menu with subsections-->
+			    <li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle active" href="#" id="destinations" role="button" 
+				      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				      Destinations
+				    </a>
+				    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				      <a class="dropdown-item" href="./destinationsPage.html">All</a>
+					    <div class="dropdown-divider"></div>
+					    <a class="dropdown-item" href="./destinationsPage.html#cafes">Cafes</a>
+					    <a class="dropdown-item" href="./destinationsPage.html#groceryStores">Grocery Stores</a>
+					    <a class="dropdown-item" href="./destinationsPage.html#restaurants">Restaurants</a>
+				    </div>
+			    </li>
+				  
+				  <!--This is the Activities link and dropdown menu with subsections-->
+				  <li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+					    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    Activities
+					  </a>
+					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					    <a class="dropdown-item" href="./activitiesPage.html">All</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="./activitiesPage.html#events">Events</a>
+						  <a class="dropdown-item" href="./activitiesPage.html#outdoors">Outdoors</a>
+					  </div>
+				  </li>				  
+			  
+				  <!--This is the DIY link and dropdown menu with subsections-->
+				  <li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+					    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    DIY
+					  </a>
+					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					    <a class="dropdown-item" href="./diyPage.html">All</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="./diyPage.html#makeup">Makeup and Beauty</a>
+						  <a class="dropdown-item" href="./diyPage.html#household">Household Projects</a>
+						  <a class="dropdown-item" href="./diyPage.html#lifestyle">Lifestyle Products</a>
+					  </div>
+				  </li>
+
+          <li class="nav-item active">                              
+					  <button id="btnLogout" class="button" onclick="logOut()"> Log Out </button>
+          </li>
+        </ul>
+      </div>
+		</nav>
+		<!--Nav bar ends here-->
+
+    <!-- This is the profile div. -->
+    <div class="container" style="margin-top:30px">
+      <div class="row">
+        <div class="col-md-12 col-centered" id="container"><h2>Profile</h2>
+          <i class="fas fa-user-circle fa-3x"></i>
+
+          <p><b>EarthSaver67</b></p>
+          <p><i>Member since 05-01-2019</i></p>
+                    
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          </p>
+
+          <i class="fas fa-leaf fa-3x" style="vertical-align: left;"></i>
+          <p><b>Level 1 - Leaf</b></p>
+
+					<div class="progress">
+            <div class="progress-bar" style="width:100%">100%</div>
+          </div>
+        </div> 
+        </br>
+      </div>
+		</div>
+		
+		<!-- Footer -->
+    <div class="footer-basic">
+		  <footer>
+			  <ul class="list-inline">
+					<li class="list-inline-item"><a href="./about.html">About Us</a></li>
+					<li class="list-inline-item"><a href="./credit.html">Credit</a></li>
+					<li class="list-inline-item"><a href="./privacy.html">Privacy Policy</a></li>
+				</ul>
+				<p class="copyright">COMP2930_Team 10 © 2019</p>
+			</footer>
+		</div>
+
+  </body>
+</html>
