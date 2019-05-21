@@ -180,46 +180,8 @@
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-    <script>
-      var firebaseConfig = {
-        apiKey: "AIzaSyArizlf6ZrRg4AHuhDAut2wUY7EyDnX6s4",
-        authDomain: "recouver-ac06e.firebaseapp.com",
-        databaseURL: "https://recouver-ac06e.firebaseio.com",
-        projectId: "recouver-ac06e",
-        storageBucket: "recouver-ac06e.appspot.com",
-        messagingSenderId: "1095105070905",
-        appId: "1:1095105070905:web:dd71f6c8856cc6df"
-      };
-      firebase.initializeApp(firebaseConfig);
-    </script>
-
-    <script>
-      var clicked = false;
-      var fb = firebase.database();
-      var xpValue;
-      var user = firebase.auth().currentUser;
-
-      function exp() {
-        if (user) {
-          var exp = 3;
-          if (clicked) {
-            window.alert("You've already gained exp for that.")
-          }
-          if (!clicked) {
-            fb.ref('Users/user1/xp').once('value', function(snapshot) {
-              xpValue = snapshot.val();
-            }).then(function() {
-            fb.ref("Users/user1").update({ xp: xpValue +3 });
-              window.alert("You've gained "+exp+" EXP!");
-              clicked = true;
-            });
-          }
-        } else {
-          $('#NoUserModal').modal('show');
-          //window.alert("You need to create an account to earn exp!");
-        }
-      }
-    </script>
+    <script type="text/javascript" src="../js/initializeFirebase.js"></script>
+    <script type="text/javascript" src="../js/iDidThisButton.js"></script>
 
     <!-- Footer -->
     <div class="footer-basic">
