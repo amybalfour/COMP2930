@@ -20,9 +20,13 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
+
+  <!--Firebase Script-->
+  <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+  <script type="text/javascript" src="../js/initializeFirebase.js"></script>
     
   <!--Main css-->
-  <link rel="stylesheet" href="./css/destinationsPage.css">
+  <link rel="stylesheet" href="./css/destinationsStyle.css">
   
   <!--Footer css-->
   <link rel="stylesheet" href="./css/footer.css">
@@ -115,6 +119,31 @@
   
   <!--Main Content-->
   <div class="container-fluid">
+
+<!-- Modal for user not being signed in -->
+<div class="modal fade" id="NoUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">No account detected.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Clicking this button would usually earn you EXP points towards your EnviroLevel. <br>
+          To gain EXP, you need to create an account.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="window.location.href = '../signUpPage.html';">Sign up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/iDidThisButton.js"></script>
+  
     <div id="lupiiTitle">
       <div class="row">
         <div class="col-md-12">
@@ -125,12 +154,15 @@
     <div id="lupiiDivide">
       <p></p>
     </div>
+    <div class="myRow">
+      <button class="button grey" onclick="exp()">I did this!</button>
+    </div>
 
     <!--First Row-->
     <div id="rowSpace">
       <div class="row">
         <div class="col-lg-4">
-          <img src="./Images/lupiiCafe/lupii11.jpg" title="'Lupii Cafe'" id="imgSizing">
+          <img src="./Images/lupiiCafe/lupii11.jpg" title="'Iced Mocha(Lupii Cafe)'" id="imgSizing">
         </div>
         <div class="col-lg-4">
           <div id="lupiiText">
@@ -151,7 +183,7 @@
     <div id="rowSpace">
       <div class="row">
         <div class="col-lg-4 mt-3">
-          <img src="./Images/lupiiCafe/lupii13.jpg" title="'Lupii Cafe'" id="imgSizing">
+          <img src="./Images/lupiiCafe/lupii13.jpg" title="'Bean Salad(Lupii Cafe)'" id="imgSizing">
         </div>
         <div class="col-lg-4">
           <div id="lupiiText">
