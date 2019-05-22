@@ -183,7 +183,7 @@ body {
 }
 
 h1{
-  font-size: 30px;
+  font-size: 45px;
   text-align: center;
   color: #EEF1EF;
 }
@@ -212,7 +212,7 @@ a {
 
 /* Button code copied from https://1stwebdesigner.com/free-code-snippets-css-buttons/ */
 
-.newRow {
+.buttonRow {
   width: 100%;
   height: 100px;
 }
