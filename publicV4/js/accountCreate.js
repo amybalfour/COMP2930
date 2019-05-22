@@ -5,6 +5,11 @@ function createAccount(){
   var userEmail = document.getElementById('createEmail').value;
   var userPassword = document.getElementById('createPass').value;
   var passwordVerif = document.getElementById('passVerif').value;
+  n = new Date();
+  var y = n.getFullYear();
+  var m = n.getMonth() + 1;
+  var d = n.getDate();
+  var dateCreated = m + "/" + d + "/" + y;
 
   if(userPassword == passwordVerif){
     firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword).then(function() {
@@ -12,7 +17,8 @@ function createAccount(){
 		firebase.database().ref("users/"+user.uid).update(
 		{
          "email":user.email,
-		 "xp":0
+         "xp":0,
+         "dateCreated":dateCreated
         });
 	  window.alert("Sign up successful!");
       window.location.href="profilePage.html";

@@ -115,19 +115,19 @@
         <div class="col-md-12 col-centered" id="container"><h2>Profile</h2>
           <i class="fas fa-user-circle fa-3x"></i>
 
-          <p><b>EarthSaver67</b></p>
-          <p><i>Member since 05-01-2019</i></p>
+          <p id="accountName"><b></b></p>
+          <p id="date"><i></i></p>
                     
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
           </p>
 
-          <i class="fas fa-leaf fa-3x" style="vertical-align: left;"></i>
-          <p><b>Level 1 - Leaf</b></p>
+          <i class="fas fa-seedling fa-3x" id="icon" style="vertical-align: left;"></i>
+          <p id="level"><b>Level 1 - Sapling</b></p>
 
 					<div class="progress">
-            <div class="progress-bar" style="width:100%">100%</div>
+            <div class="progress-bar" style="width:0%">0%</div>
           </div>
         </div> 
         </br>
@@ -141,10 +141,68 @@
 					<li class="list-inline-item"><a href="./about.html">About Us</a></li>
 					<li class="list-inline-item"><a href="./credit.html">Credit</a></li>
 					<li class="list-inline-item"><a href="./privacy.html">Privacy Policy</a></li>
-				</ul>
+				</ul>""
 				<p class="copyright">COMP2930_Team 10 © 2019</p>
 			</footer>
 		</div>
+
+		<script>
+		$(document).ready(function() {
+		firebase.auth().onAuthStateChanged(function(user) {
+			if (user) {
+			// User is signed in.
+			var fb = database.ref();
+			var user = firebase.auth().currentUser;
+			//let user = Auth.auth().currentUser
+			let email = user.email;
+
+			document.getElementById('accountName').innerHTML = "<b>" + email + "</b>";
+			}
+		});
+	})
+		</script>
+
+
+		<script>
+		$(document).ready(function() {
+			firebase.auth().onAuthStateChanged(function(user) {
+			  var user = firebase.auth().currentUser;
+				var fb = firebase.database();
+				fb.ref('users/' + user.uid + '/dateCreated').once('value', function(snapshot) {
+						date = snapshot.val();
+				}).then(function() {
+					  document.getElementById('date').innerHTML = "<i>Member since: " + date + "</i>";
+				});
+
+        fb.ref('users/' + user.uid + '/xp').once('value', function(snapshot) {
+						xpValue = snapshot.val();
+						xp = xpValue % 100;
+        }).then(function() {
+						document.getElementsByClassName('progress-bar')[0].style.width = xp + "%";
+						document.getElementsByClassName('progress-bar')[0].innerHTML = xp + "%";
+						var level = (xpValue / 100)
+						if (level > 1 && level < 2) {
+							document.getElementById('icon').className = "fas fa-leaf fa-3x";
+							document.getElementById('level').innerHTML = "<b>Level 2 - Leaf</b>"
+						}
+						if (level > 2 && level < 3) {
+							document.getElementById('icon').className = "fab fa-pagelines fa-3x";
+							document.getElementById('level').innerHTML = "<b>Level 3 - Branch</b>";
+						}
+						if (level > 3 && level < 4) {
+							document.getElementById('icon').className = "fas fa-tree fa-3x";
+							document.getElementById('level').innerHTML = "<b>Level 4 - Tree</b>";
+						}
+						if (level > 4) {
+							document.getElementById('icon').className = "fas fa-recycle fa-3x";
+							document.getElementById('level').innerHTML = "<b>Level 5 - Zero Waste Master</b>";
+							document.getElementsByClassName('progress-bar')[0].style.width = "100%";
+					  	document.getElementsByClassName('progress-bar')[0].innerHTML = "Maxed Out";
+						}
+        });
+			})
+		})
+		</script>
 
   </body>
 </html>
