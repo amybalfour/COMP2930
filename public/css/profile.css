@@ -1,0 +1,104 @@
+#profile { 
+}
+body {
+  font-family: 'Poppins', sans-serif; 
+  overflow-x: hidden;
+}
+#container {
+  height: 530px;
+  width: 400px;
+  background-color:#E5C1BD;
+  padding: 15px;
+  margin: 30px;
+  border-radius: 20px;
+  border: 2px solid #EEF1EF;
+  word-wrap:break-all;
+/* 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size:12pt;
+    color: #fffdd0;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
+}
+#bookhead {           
+}
+#bookmark {
+  height: 530px;
+  width: 100px;
+  background-color: #E5C1BD;
+  padding: 10px;
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size:12pt;
+    color: #fffdd0;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
+}
+.footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+  bottom: 0;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+.newUser {
+  display: block;
+}
+.oldUser {
+  display: none;
+} 

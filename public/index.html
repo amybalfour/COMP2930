@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!--Taken from https://getbootstrap.com/docs/3.3/getting-started/-->
+    
+    <title>Home</title>
+
+    <!--Link to the CSS style sheet for the home page-->
+    <link rel="stylesheet" type="text/css" href="./css/homePage.css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!--Link to the JavaScript library necessary for navbar functions-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+      crossorigin="anonymous"></script>
+
+    <!--Link to the CSS library from Bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous"> 
+
+    <!--Font link(poppins)-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
+	
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+
+    <!--JavaScript file to initialize firebase-->
+    <script src="./js/initializeFirebase.js"></script>
+    <script src="./js/accountInfo.js"></script>
+  </head>
+  
+  <!--Body includes a background pictures and starts here-->
+  <body>	
+    <!--Nav bar begins here-->
+    <nav class="navbar navbar-light navbar-expand-md bg-faded sticky-top justify-content-center" 
+      style = "background-color: #EEF1EF" id="header">
+			
+      <!--Collapses the nav bar into a smaller menu for phones and tablets-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!--Collapses the nav bar on a smaller screen-->
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav justify-content-center">
+	  
+			    <!--This is the link to the Home page-->
+			    <li class="nav-item active">
+			      <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+			    </li>
+				  
+			    <!--This is the Destinations link and dropdown menu with subsections-->
+			    <li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle active" href="#" id="destinations" role="button" 
+				      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				      Destinations
+				    </a>
+				    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				      <a class="dropdown-item" href="./destinationsPage.html">All</a>
+					    <div class="dropdown-divider"></div>
+					    <a class="dropdown-item" href="./destinationsPage.html#cafes">Cafes</a>
+					    <a class="dropdown-item" href="./destinationsPage.html#groceryStores">Grocery Stores</a>
+					    <a class="dropdown-item" href="./destinationsPage.html#restaurants">Restaurants</a>
+				    </div>
+			    </li>
+				  
+				  <!--This is the Activities link and dropdown menu with subsections-->
+				  <li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+					    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    Activities
+					  </a>
+					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					    <a class="dropdown-item" href="./activitiesPage.html">All</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="./activitiesPage.html#events">Events</a>
+						  <a class="dropdown-item" href="./activitiesPage.html#outdoors">Outdoors</a>
+					  </div>
+				  </li>				  
+			  
+				  <!--This is the DIY link and dropdown menu with subsections-->
+				  <li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+					    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    DIY
+					  </a>
+					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					    <a class="dropdown-item" href="./diyPage.html">All</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="./diyPage.html#makeup">Makeup and Beauty</a>
+						  <a class="dropdown-item" href="./diyPage.html#household">Household Projects</a>
+						  <a class="dropdown-item" href="./diyPage.html#lifestyle">Lifestyle Products</a>
+					  </div>
+				  </li>
+
+				  <!--This is the link for users to login or sign up-->
+				  <li>
+					  <a class="nav-link active justify-content-right" href="./signUpPage.html" id="newUser">Login/Sign Up</a>
+					  <a class="nav-link active justify-content-right" href="./profilePage.html" id="oldUser">Profile</a>
+				  </li>
+			  </ul>
+		  </div>
+    </nav>
+    <!--Nav bar ends here-->
+
+	  <!-- Homepage carousel starts here -->
+    <header>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url(./images/Home_Background_Wide5.jpg)">
+            <div class="carousel-caption mb-5">
+              <h1 id="home-title">Welcome to ReCouver!</h1>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <a href="#"><div class="carousel-item" style="background-image: url(./images/Destinations_Background3.jpg)"></a>
+            <div class="carousel-caption">
+              <a class="nav-link" href="./destinationsPage.html"><h1 id="home-title2">Destinations</h1> <span class="sr-only">(currently)</span></a>
+              <p class="home-description">Food from Vancouver destinations that believe in zero-waste.</p>
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <a href="#"><div class="carousel-item" style="background-image: url(./images/Activities1.jpg)"></a>
+            <div class="carousel-caption">
+              <a class="nav-link" href="./activitiesPage.html"><h1 id="home-title">Activities</h1> <span class="sr-only">(currently)</span></a>
+              <p class="home-description">Life in Vancouver, no waste added.</p>
+            </div>
+          </div>
+        <!-- Slide Four -->
+          <a href="#"><div class="carousel-item" style="background-image: url(./images/diy1.jpg)"></a>
+            <div class="carousel-caption">
+              <a class="nav-link" href="./diyPage.html"><h1 id="home-title">DIY</h1> <span class="sr-only">(currently)</span></a>
+              <p class="home-description">How to reuse materials and create your own products.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <a class="carousel-control-prev mt-5" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon mt-5" aria-hidden="false"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next mt-5" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon mt-5" aria-hidden="false"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
+    <!-- End of homepage carousel -->
+
+    <!-- Page Content -->
+    <section class="py-5">
+      <div class="container">
+        <p>We believe in reducing the impact we have on our planet and providing information to help
+           you start your journey into a zero-waste lifestyle. We provide a hub of destinations,
+           activities and do-it-yourself projects that will help you reduce waste and give back to
+           the planet one step at a time.
+        </p>
+      </div>
+    </section>
+	  
+	  <!-- Footer -->
+    <div class="footer-basic">
+		  <footer>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="./about.html">About Us</a></li>
+          <li class="list-inline-item"><a href="./credit.html">Credit</a></li>
+          <li class="list-inline-item"><a href="./privacy.html">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">COMP2930_Team 10 © 2019</p>
+		  </footer>
+	  </div>
+  </body>
+</html>

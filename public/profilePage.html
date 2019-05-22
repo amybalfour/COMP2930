@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">        
+		<title>Profile</title>
+		
+		<!-- This is imported to use the font-awesome icons. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+		  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!--Link to the JavaScript library necessary for navbar functions-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+      crossorigin="anonymous"></script>
+
+    <!--Link to the CSS library from Bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">
+
+		<!-- Firebase libraries --> 
+		<script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+		
+		<!-- Link to profile css and the sheet that links our Firebase database. -->
+		<link rel = "stylesheet" type = "text/css" href = "./css/profile.css" />
+		
+		<script src="./js/initializeFirebase.js"></script>
+		<script src="./js/accountInfo.js"></script>
+		<!--Font link(poppins)-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  </head>
+
+
+  <body background="./images/blue-sky.jpg">
+		   
+		<!--Nav bar begins here-->
+    <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center" 
+      style = "background-color: #EEF1EF" id="header">
+			
+      <!--Collapses the nav bar into a smaller menu for phones and tablets-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!--Collapses the nav bar on a smaller screen-->
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav justify-content-center">
+	  
+			    <!--This is the link to the Home page-->
+			    <li class="nav-item active">
+			      <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+			    </li>
+				  
+			    <!--This is the Destinations link and dropdown menu with subsections-->
+			    <li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle active" href="#" id="destinations" role="button" 
+				      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				      Destinations
+				    </a>
+				    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				      <a class="dropdown-item" href="./destinationsPage.html">All</a>
+					    <div class="dropdown-divider"></div>
+					    <a class="dropdown-item" href="./destinationsPage.html#cafes">Cafes</a>
+					    <a class="dropdown-item" href="./destinationsPage.html#groceryStores">Grocery Stores</a>
+					    <a class="dropdown-item" href="./destinationsPage.html#restaurants">Restaurants</a>
+				    </div>
+			    </li>
+				  
+				  <!--This is the Activities link and dropdown menu with subsections-->
+				  <li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+					    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    Activities
+					  </a>
+					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					    <a class="dropdown-item" href="./activitiesPage.html">All</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="./activitiesPage.html#events">Events</a>
+						  <a class="dropdown-item" href="./activitiesPage.html#outdoors">Outdoors</a>
+					  </div>
+				  </li>				  
+			  
+				  <!--This is the DIY link and dropdown menu with subsections-->
+				  <li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+					    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    DIY
+					  </a>
+					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					    <a class="dropdown-item" href="./diyPage.html">All</a>
+						  <div class="dropdown-divider"></div>
+						  <a class="dropdown-item" href="./diyPage.html#makeup">Makeup and Beauty</a>
+						  <a class="dropdown-item" href="./diyPage.html#household">Household Projects</a>
+						  <a class="dropdown-item" href="./diyPage.html#lifestyle">Lifestyle Products</a>
+					  </div>
+				  </li>
+
+          <li class="nav-item active">                              
+					  <button id="btnLogout" class="button" onclick="logOut()"> Log Out </button>
+          </li>
+        </ul>
+      </div>
+		</nav>
+		<!--Nav bar ends here-->
+
+    <!-- This is the profile div. -->
+    <div class="container" style="margin-top:30px">
+      <div class="row">
+        <div class="col-md-12 col-centered overflow-auto" id="container"><h2>Profile</h2>
+          <i class="fas fa-user-circle fa-3x"></i>
+
+          <p id="accountName"><b></b></p>
+          <p id="date"><i></i></p>
+                    
+                    
+			<div class="row">
+				<div class="col-md-12 col-centered" id="descContainer" contenteditable="true">
+				<form id="desc"></form>
+				</div>
+					<button type="submit" id="saveButton" onclick="update()" style="margin-left: 15px;">Update Bio</button>	
+			</div>
+		  
+		  </br>
+		   <div class="row">
+			<div class="col-md-12 col-centered" id="leveling">
+				<i class="fas fa-seedling fa-3x" id="icon" style="vertical-align: left;"></i>
+				<p id="level"><b>Level 1 - Sapling</b></p>
+
+				<div class="progress">
+					<div class="progress-bar" style="width:0%">0%</div>
+				</div>
+			</div>
+		   </div>
+		 
+        </div> 
+        </br>
+      </div>
+	</div>
+	<!-- End of profile -->
+		
+		<!-- Footer -->
+    <div class="footer-basic">
+		  <footer>
+			  <ul class="list-inline">
+					<li class="list-inline-item"><a href="./about.html">About Us</a></li>
+					<li class="list-inline-item"><a href="./credit.html">Credit</a></li>
+					<li class="list-inline-item"><a href="./privacy.html">Privacy Policy</a></li>
+				</ul>
+				<p class="copyright">COMP2930_Team 10 © 2019</p>
+			</footer>
+		</div>
+
+		<!-- Grabs the user's email for their username -->
+		<script>
+		$(document).ready(function() {
+		firebase.auth().onAuthStateChanged(function(user) {
+			if (user) {
+			// User is signed in.
+			var fb = database.ref();
+			var user = firebase.auth().currentUser;
+			//let user = Auth.auth().currentUser
+			let email = user.email;
+
+			document.getElementById('accountName').innerHTML = "<b>" + email + "</b>";
+			}
+		});
+		})
+		</script>
+		
+		<!-- updating database w/ changes to bio -->
+		<script type="text/javascript">
+			document.getElementById("saveButton").onclick = function () {
+				/*
+					desc is whatever the id of the div you had
+					your bio in. For example:
+					<div id="desc" contenteditable="true">Add bio</div>
+				*/
+				var desc = document.getElementById('desc');
+				firebase.auth().onAuthStateChanged(function(user) {
+					/*
+						"users" is whatever the branch your users are under.
+						For the update() function, the input has to be a JSON object,
+							i.e: {"nameofnode": newvalue}
+					*/
+					firebase.database().ref('users/' + user.uid).update(
+						{"desc": desc.innerHTML}
+					);
+				});
+			window.alert("Profile updated!");
+			console.log(desc);
+			};
+		</script>
+
+		<!-- grabbing desc's current value from the database -->
+		<script type="text/javascript">
+			firebase.auth().onAuthStateChanged(function(user) {
+				/*
+					"users" is whatever the branch your users are under.
+
+					Before getting desc's value, we have to take a 'static' 
+					snapshot of whatever desc is currently is, because
+					changes in Firebase are in real-time.
+				*/
+				var desc = firebase.database().ref('users/' + user.uid).child('desc');
+				desc.once('value', function(snapshot) {
+					var desc = snapshot.val();
+					// Do whatever you want with desc's value, just do console.log for now.
+					document.getElementById('desc').innerHTML = desc;
+					console.log(desc);
+				});
+			});
+		</script>
+		
+		<script>
+		$(document).ready(function() {
+			firebase.auth().onAuthStateChanged(function(user) {
+			  var user = firebase.auth().currentUser;
+				var fb = firebase.database();
+				fb.ref('users/' + user.uid + '/dateCreated').once('value', function(snapshot) {
+						date = snapshot.val();
+				}).then(function() {
+					  document.getElementById('date').innerHTML = "<i>Member since: " + date + "</i>";
+				});
+
+        fb.ref('users/' + user.uid + '/xp').once('value', function(snapshot) {
+						xpValue = snapshot.val();
+						xp = xpValue % 100;
+        }).then(function() {
+						document.getElementsByClassName('progress-bar')[0].style.width = xp + "%";
+						document.getElementsByClassName('progress-bar')[0].innerHTML = xp + "%";
+						var level = (xpValue / 100)
+						if (level > 1 && level < 2) {
+							document.getElementById('icon').className = "fas fa-leaf fa-3x";
+							document.getElementById('level').innerHTML = "<b>Level 2 - Leaf</b>"
+						}
+						if (level > 2 && level < 3) {
+							document.getElementById('icon').className = "fab fa-pagelines fa-3x";
+							document.getElementById('level').innerHTML = "<b>Level 3 - Branch</b>";
+						}
+						if (level > 3 && level < 4) {
+							document.getElementById('icon').className = "fas fa-tree fa-3x";
+							document.getElementById('level').innerHTML = "<b>Level 4 - Tree</b>";
+						}
+						if (level > 4) {
+							document.getElementById('icon').className = "fas fa-recycle fa-3x";
+							document.getElementById('level').innerHTML = "<b>Level 5 - Zero Waste Master</b>";
+							document.getElementsByClassName('progress-bar')[0].style.width = "100%";
+					  	document.getElementsByClassName('progress-bar')[0].innerHTML = "Maxed Out";
+						}
+        });
+			})
+		})
+		</script>
+
+  </body>
+</html>

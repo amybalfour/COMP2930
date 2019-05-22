@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Garibaldi Lake</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Link to the font for the whole page-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!--Link to the JavaScript library necessary for navbar functions-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+      crossorigin="anonymous"></script>
+
+    <!--Link to the CSS library from Bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">
+    
+    <!--Link to the Leaflet APIs-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+      integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+      crossorigin="">
+    </script>
+
+    <!--Link to the CSS for the page-->
+    <link rel="stylesheet" type="text/css" href="../css/a.css">
+
+    <!--Link to the footer CSS-->
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+
+    <!--JavaScript file to initialize firebase-->
+	<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="../js/initializeFirebase.js"></script>
+    <script src="../js/accountInfo.js"></script>  
+  </head>
+  <body>
+    <!--Nav bar begins here-->
+    <nav class="navbar navbar-light navbar-expand-md bg-faded sticky-top justify-content-center" 
+      style = "background-color: #EEF1EF" id="header">
+			
+      <!--Collapses the nav bar into a smaller menu for phones and tablets-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!--Collapses the nav bar on a smaller screen-->
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav justify-content-center">
+	  
+	      <!--This is the link to the Home page-->
+	      <li class="nav-item active">
+	        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+	      </li>
+				  
+	      <!--This is the Destinations link and dropdown menu with subsections-->
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle active" href="#" id="destinations" role="button" 
+	          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Destinations
+	        </a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <a class="dropdown-item" href="../destinationsPage.html">All</a>
+			  <div class="dropdown-divider"></div>
+			  <a class="dropdown-item" href="../destinationsPage.html#cafes">Cafes</a>
+			  <a class="dropdown-item" href="../destinationsPage.html#groceryStores">Grocery Stores</a>
+			  <a class="dropdown-item" href="../destinationsPage.html#restaurants">Restaurants</a>
+			</div>
+		  </li>
+				  
+		  <!--This is the Activities link and dropdown menu with subsections-->
+		  <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+		      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		      Activities
+		    </a>
+		    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		      <a class="dropdown-item" href="../activitiesPage.html">All</a>
+			  <div class="dropdown-divider"></div>
+			  <a class="dropdown-item" href="../activitiesPage.html#events">Events</a>
+			  <a class="dropdown-item" href="../activitiesPage.html#outdoors">Outdoors</a>
+		    </div>
+		  </li>				  
+			  
+		  <!--This is the DIY link and dropdown menu with subsections-->
+		  <li class="nav-item dropdown">
+		    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" 
+		      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		      DIY
+		    </a>
+		    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		      <a class="dropdown-item" href="../diyPage.html">All</a>
+			  <div class="dropdown-divider"></div>
+			  <a class="dropdown-item" href="../diyPage.html#makeup">Makeup and Beauty</a>
+			  <a class="dropdown-item" href="../diyPage.html#household">Household Projects</a>
+		      <a class="dropdown-item" href="../diyPage.html#lifestyle">Lifestyle Products</a>
+			</div>
+		  </li>
+
+		  <!--This is the link for users to login or sign up-->
+		  <li>
+			<a class="nav-link active justify-content-right" href="../signUpPage.html" id="newUser">Login/Sign Up</a>
+			<a class="nav-link active justify-content-right" href="../profilePage.html" id="oldUser">Profile</a>
+		  </li>
+		</ul>
+	  </div>
+    </nav>
+    <!--Nav bar ends here-->
+
+    <div id="container">
+	  <div>
+        <button class="green button" onclick="exp()">I did this!</button>
+        <p class="activityTitle">Garibaldi Lake</p>
+        <p class="activityDate">Hike</p>
+        <p class="activityDate">18km round trip</p>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="description">Garibaldi Lake trail offers a beautiful (but lengthy) hike
+            with an amazing view to finish off with.
+            <p class="description">Click <a href="https://www.vancouvertrails.com/trails/garibaldi-lake/">here</a> for more info.
+            </p>
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <div id="map">
+            <script>
+              var mymap = L.map('map').setView([49.281003, -123.085564], 12);
+              var marker = L.marker([49.939312, -123.026882]).addTo(mymap);
+              marker.bindPopup("<b>Garibaldi Lake</b><br>Squamish-Lillooet D, BC").openPopup();
+
+              L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYnJ5Y2UxMjM0NSIsImEiOiJjanZoMmxvejYwZTNsNDhyZ2w2M2NoNG9rIn0.xyyjfXZ4egW9hJGX0lu5Cw', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox.streets',
+                accessToken: 'your.mapbox.access.token'
+              }).addTo(mymap);
+            </script>
+          </div>
+          <!--img class="divImg" src="../images/neighbourhoodcleanup2.jpg">
+          <p class="credit">Credit: <a href="http://flickrhivemind.net/User/Rod%20Raglin#Tags">Rod Raglin</a></p-->
+        </div>
+      </div>
+    </div> 
+    <!--Container ends here--> 
+
+    <!-- Modal for user not being signed in -->
+    <div class="modal fade" id="NoUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">No account detected.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Clicking this button would usually earn you EXP points towards your EnviroLevel. <br>
+              To gain EXP, you need to create an account.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="window.location.href = '../signUpPage.html';">Sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+      <script type="text/javascript" src="../js/initializeFirebase.js"></script>
+      <script type="text/javascript" src="../js/iDidThisButton.js"></script>
+  
+
+    <!-- Footer -->
+    <div class="footer-basic">
+      <footer>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="../about.html">About Us</a></li>
+          <li class="list-inline-item"><a href="../credit.html">Credit</a></li>
+          <li class="list-inline-item"><a href="../privacy.html">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">COMP2930_Team 10 © 2019</p>
+      </footer>
+    </div>
+
+  </body>
+</html>
