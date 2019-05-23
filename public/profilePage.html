@@ -188,11 +188,14 @@
 						For the update() function, the input has to be a JSON object,
 							i.e: {"nameofnode": newvalue}
 					*/
+
+					
+
 					firebase.database().ref('users/' + user.uid).update(
 						{"desc": desc.innerHTML}
 					);
 				});
-			window.alert("Profile updated!");
+				confirm("Make changes to bio?");						
 			console.log(desc);
 			};
 		</script>
@@ -214,6 +217,7 @@
 					document.getElementById('desc').innerHTML = desc;
 					console.log(desc);
 				});
+
 			});
 		</script>
 		
